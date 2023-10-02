@@ -3,7 +3,7 @@
     <img  alt="logo" src="https://github.com/novuhq/hacksquad-website/assets/17677196/c814d18d-e39c-4d3c-806c-b9744bfc39c3">
   </a>
 </p>
-<h2 align="center">Star(🌟) Our "anycode repo" before Contributing</h2>
+<h2 align="center">Star(🌟) Our "anycode" Repo before Contributing</h2>
 <h2 align="center">
 Welcome to Hacksquad 2023 !
 </h2>
