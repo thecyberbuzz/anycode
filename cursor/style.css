@@ -1,0 +1,49 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow: hidden;
+}
+
+html, body{
+      overflow: hidden;
+      scroll-behavior: smooth;
+        height: 100%;
+        width: 100%;
+        /* position: relative; */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Raleway', sans-serif;;
+}
+
+
+#main{
+           height: 100%;
+           width: 100%;
+           color: white;
+           /* position: absolute; */
+           display: flex;
+           justify-content: center;
+           align-items: center;
+       
+
+}
+
+#main h1{
+     font-size: 100px;
+}
+
+.cursor{
+      height: 60px;
+      width: 60px;
+      /* background-color: rgb(255, 255, 255); */
+  background-color: #fff;
+  color:#fff;
+      border-radius: 50%;
+      position: absolute;
+      mix-blend-mode: difference;
+      transition: all linear 0.1s;
+}
