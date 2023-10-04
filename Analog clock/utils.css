@@ -1,0 +1,18 @@
+.text-center{
+    text-align: center;
+    font-style:initial;
+}
+/* .bg-red{
+    background-color: tomato;
+} */
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-col{
+    flex-direction: column;
+}
+.item-center{
+    align-items: center;
+}
