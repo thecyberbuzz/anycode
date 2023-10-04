@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    .seceltion {
+        @apply selection:bg-dark selection:text-white selection:text-opacity-100 dark:selection:bg-[#ffff64] dark:selection:bg-opacity-10
+    }
+
+    .custom-transition {
+        @apply transition-all duration-200 ease-in-out
+    }
+
+    .heading {
+        @apply text-neutral-900 dark:text-white font-bold mb-4
+    }
+
+    .menu-item {
+        @apply font-normal text-lg text-neutral-900 dark:text-white hover:text-opacity-80
+    }
+
+    .btn {
+        @apply px-8 py-5 m-1 font-bold text-base text-white dark:text-white no-underline rounded-md capitalize bg-opacity-100 hover:bg-opacity-90 dark:bg-opacity-90 dark:hover:bg-opacity-70 custom-transition
+    }
+
+    .features-box {
+        @apply basis-[30%] px-2 py-8 mx-3 my-4 bg-[#090E34] bg-opacity-10 dark:bg-opacity-30 shadow-sm shadow-[#efefef4f] hover:shadow-lg hover:shadow-[#efefef2f] rounded-lg border border-amber-50 border-opacity-10 custom-transition
+    }
+
+    .tools-box {
+        @apply flex items-center justify-between basis-1/2 px-4 py-3 mr-3 bg-gray-500 bg-opacity-10 rounded-lg border border-gray-500 border-opacity-25 hover:border-rose-700 dark:hover:border-amber-50 custom-transition
+    }
+
+    .workflow-title {
+        @apply text-neutral-900 dark:text-white text-xl font-bold
+    }
+
+    .workflow-text {
+        @apply text-neutral-900 dark:text-white text-xs md:text-base font-normal text-opacity-70
+    }
+
+    .price-table {
+        @apply relative w-full px-8 py-12 bg-white shadow-3xl dark:bg-slate-800 dark:shadow-none rounded-md
+    }
+
+    .price-btn {
+        @apply block w-full py-3 border border-transparent mt-6
+    }
+
+    .price-option {
+        @apply text-gray-500 dark:text-gray-400 text-opacity-90 text-base font-medium my-2
+    }
+
+    .price-list-style {
+        @apply inline-flex items-center justify-center mr-1 w-5 h-5  bg-blue-100 dark:bg-slate-700 rounded-full
+    }
+
+    .form-input {
+        @apply bg-white dark:bg-backgrount-input px-4 py-4 rounded-md outline-0 border border-transparent focus:border-sky-400 shadow-3xl text-white
+    }
+
+    .form-label {
+        @apply text-neutral-900 dark:text-white font-bold mb-3 font-normal
+    }
+
+    .social {
+        @apply inline-block mx-2 ml-0 fill-neutral-800 dark:fill-white hover:fill-neutral-400
+    }
+}
+@layer utilities {
+    .svg-fill {
+        fill: rgb(74, 108, 247);
+    }
+}
