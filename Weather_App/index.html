@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body
+  style="
+    background: linear-gradient(
+      135deg,
+      #1e69de 13%,
+      #3690f0 36%,
+      #3690f0 61%,
+      #3690f0 61%,
+      #1e69de 70%,
+      #1e69de 70%,
+      #1e69de 75%,
+      #1e69de 88%,
+      #1e69de 88%
+    );
+  "
+>
+  <div class="container-sm">
+    <div class="row-sm">
+      <div class="col-sm-12">
+        <h1 class="text-center mt-2">Weather App</h1>
+        <br />
+        <br />
+        <!-- Two Buttons -->
+
+        <div class="d-flex flex-row justify-content-around">
+          <div class="p-2">
+            <button id="yourWeather" onclick="apidata()" class="button">
+              Your Weather
+            </button>
+          </div>
+          <div class="p-2">
+            <button
+              type="button"
+              value="button"
+              id="ButtonClicked"
+              class="button"
+            >
+              Search Weather
+            </button>
+          </div>
+        </div>
+        <br />
+        <br />
+              <!-- Search Bar -->
+              <div
+              class="searchbar-container d-flex flex-row justify-content-center">
+              <input
+                type="search"
+                placeholder="Search your cities"
+                id="searchbar"
+              />
+              <button
+                type="submit"
+                class="searchbtn"
+                value="button"
+                onclick="apidata2()"
+              >
+                <i class="bi bi-search mx-2"></i>
+              </button>
+            </div>
+                  
+            <!-- State Weather Information or current location info -->
+            <div class="d-flex flex-column yourWeather" id="main-content">
+              <div class="state-desc">
+                <div class="d-flex justify-content-center">
+                  <h1 class="text-center d-inline-block" id="state-name"></h1>
+                  &nbsp; &nbsp;
+                  <h3 id="temp" class="d-inline-block mt-1"></h3>
+                </div>
+                <h6 class="text-center" id="feelLike"></h6>
+                <div class="d-flex justify-content-center">
+                  <span>MaxTemp:</span> &nbsp;
+                  <h6 class="text-center d-inline-block mt-1" id="maxTemp"></h6>
+                  &nbsp; &nbsp;<span>MinTemp:</span> &nbsp;
+                  <h6 id="MinTemp" class="d-inline-block mt-1"></h6>
+                </div>
+                <h4 class="text-center" id="weather-icon"></h4>
+                <h6 class="text-center" id="weather-desc"></h6>
+              </div>
+  
+              <br />
+              <br />
+  
+              <!-- Wind Information -->
+  
+              <div class="d-flex flex-row justify-content-around">
+                <div class="wind">
+                  <div
+                    class="d-flex justify-content-center align-items-center flex-column">
+                    <h5 class="text-center">Wind</h5>
+  
+                    <br />
+                      <span class="m-auto">
+                      <i
+                        class="fa-solid fa-wind"
+                        style="font-size: 65px; color: green">
+                        </i>
+                      </span>
+                  </div>
+  
+                  <br />
+  
+                  <span><h6 class="d-inline-block">Wind Speed : &nbsp;</h6></span>
+                  <h6 class="wind-speed text-center mt-2 d-inline-block"></h6>
+                  <br />
+                  <span class="m-auto">
+                    <h6 class="d-inline-block">Wind dir : &nbsp;</h6>
+                    </span>
+                    
+                  <h6 class="wind-direction text-center mt-2 d-inline-block"></h6>
+                </div>
+           <!-- 
+            humidity Information
+            -->
+                <div class="">
+                  <div
+                    class="d-flex justify-content-center align-items-center flex-column">
+                    <h5 class="text-center">Humidity</h5>
+                    <br />
+                    <span class="m-auto">
+                      <i
+                        class="fa-solid fa-droplet"
+                        style="font-size: 65px; color: white">
+                        </i>
+                    </span>
+                  </div>
+  
+                  <br />
+  
+                  <span class="m-auto">
+                    <strong>Humidity:</strong>
+                    <h6 class="text-center Humidity d-inline-block"></h6>
+                  </span>
+                </div>
+  
+                <!-- Sun information -->
+                <div class="sun">
+                  <div class="d-flex justify-content-center align-items-center flex-column">
+                       <h5 class="text-center">Sun</h5>
+                       <span class="m-auto">
+                       <i
+                        class="bi bi-brightness-high"
+                        style="font-size: 65px; color: orange">
+                      </i>
+                      </span>
+                  </div>
+  
+                  <br />
+  
+                  <span class="m-auto">
+                    <strong>Sunrise:</strong>
+                    <h6 id="sunrise" class="d-inline-block"></h6>
+                  </span>
+  
+                  <br />
+  
+                  <span class="m-auto">
+                    <strong id="">Sunset:</strong>
+                    <h6 id="sunset" class="d-inline-block"></h6>
+                </span>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>     

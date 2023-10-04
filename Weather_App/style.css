@@ -1,0 +1,35 @@
+.searchbar-container{
+    opacity: 0;
+}
+
+.container{
+    border: 2px solid red;
+    background:#DDEDF1;
+}
+.button{
+    padding: 8px 25px;
+    background-color: blueviolet;
+    outline: 1px solid lightcoral;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+
+}
+#searchbar{
+    padding: 10px 30px;
+
+    width: min(55%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius:5px ;
+    border: transparent;
+    background-color: #F0F0F0;
+
+}
+.searchbtn{
+    padding: 10px 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius:5px ;
+    border: transparent;
+}
+
+
