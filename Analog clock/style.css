@@ -1,0 +1,17 @@
+.button{
+    padding: 20px;
+    margin: 3px 3px;
+    border: 2px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.button:hover{
+    background-color: rgb(214, 139, 139);
+}
+.row input{
+    margin: 9px;
+    padding: 14px 34px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
