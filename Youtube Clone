@@ -1,0 +1,128 @@
+//index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Video Sharing Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="video">
+            <video id="videoPlayer" controls>
+                <source src="sample_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>Video Title</h2>
+            <p>Views: <span id="viewCount">100</span>, Likes: <span id="likeCount">50</span></p>
+            <button id="likeButton">Like</button>
+        </section>
+
+        <!-- More video sections can be added here -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Video Sharing Platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+//index.css
+/* Basic styles for the video-sharing platform */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.video {
+    margin-bottom: 20px;
+}
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+//script.js
+document.addEventListener("DOMContentLoaded", function () {
+    const videoPlayer = document.getElementById("videoPlayer");
+    const viewCount = document.getElementById("viewCount");
+    const likeCount = document.getElementById("likeCount");
+    const likeButton = document.getElementById("likeButton");
+
+    let views = 100;
+    let likes = 50;
+    let isLiked = false;
+
+    videoPlayer.addEventListener("play", function () {
+        // Simulate increasing view count when the video starts playing
+        views += 1;
+        viewCount.textContent = views;
+    });
+
+    likeButton.addEventListener("click", function () {
+        // Simulate toggling the "Like" button
+        if (!isLiked) {
+            likes += 1;
+            likeButton.textContent = "Liked!";
+        } else {
+            likes -= 1;
+            likeButton.textContent = "Like";
+        }
+        isLiked = !isLiked;
+
+        likeCount.textContent = likes;
+    });
+});
