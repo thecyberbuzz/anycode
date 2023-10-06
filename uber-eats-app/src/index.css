@@ -1,0 +1,278 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: UberMove, sans-serif;
+
+}
+
+html,body{
+overflow-x: hidden;
+}
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+.nav-content{
+  display: flex;
+  justify-content: space-between;
+  background-color: #F2CA2F;
+  height: 100px;
+  padding: 0px 30px;
+  align-items: center;
+}
+.nav-content-sticky{
+  display: flex;
+  justify-content: space-between;
+  background-color: azure;
+  height: 100px;
+  padding: 0px 30px;
+  align-items: center;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: azure;
+  color: black;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+
+  
+}
+.nav-items1{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.nav-items1 li{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.nav-items2{
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.hide{
+  display: none;
+}
+.nav-items3-sticky{
+  list-style: none;
+}
+.nav-items3-sticky input{
+  border: 1px solid azure;
+  font-size: 1.2rem;
+padding-left: 2rem;
+  width: 48vw;
+  height: 8vh;
+}
+button{
+  cursor: pointer;
+}
+.nav-buttons{
+  width:7vw ;
+  height: 8vh;
+  border-radius: 4rem;
+
+}
+#logIn{
+  background-color: azure;
+  color: black;
+  border: 1px solid azure;
+  font-weight: bold;
+font-size: 1rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+#signUp{
+  background-color: black;
+  color: azure;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+#logIn:hover{
+  filter:brightness(0.7);
+}
+#signUp:hover{
+  filter:brightness(0.4);
+
+}
+.order-input{
+  background-color: #F2CA2F;
+  height: 475px;
+  padding: 0px 30px;
+  padding-top:100px ;
+}
+.order-input h1{
+  font-size: 3.5rem;
+  margin-bottom: 14px;
+}
+.recent-order{
+  padding-top: 20px;
+}
+.order-input p a {
+  color: black;
+}
+.input-fields{
+  display: flex;
+  gap: 5px
+}
+#findFood{
+background-color: black;
+color: azure;
+border: 1px solid black;
+border-radius: 2px;
+width: 9vw;
+font-size: 1.2rem;
+text-align: center;
+}
+.input-fields input{
+  width: 38vw;
+  height: 8vh;
+  border: 1px solid azure;
+  font-size: 1.2rem;
+padding-left: 2rem;
+}
+.input-fields select{
+  border: 1px solid azure;
+  width: 14vw;
+  font-size: 1.2rem;
+  text-align: center;
+}
+#findFood:hover{
+  filter:brightness(0.4);
+
+}
+.features-image{
+  width: 30vw;
+}
+.main-features{
+  padding: 0px 30px;
+margin-top: 80px;
+margin-bottom: 50px;
+  display: flex;
+  gap: 20px;
+}
+.feature{
+  cursor: pointer;
+}
+.features-head{
+  padding: 12px 0px;
+}
+.features-link{
+  color: black;
+}
+.header{
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  
+}
+.header h2{
+  font-size: 2.4rem;
+}
+.header a{
+color: black;
+font-weight: bold;
+margin-top: 12px;
+font-size: 1.1rem;
+}
+.arrange-columns{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 30px;
+  margin-bottom: 60px;
+}
+.cities-name{
+  list-style: none;
+  line-height: 2.7rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+hr{
+  margin-top: 10px ;
+  margin-bottom: 60px;
+}
+.footer-part1{
+  display: flex;
+  justify-content:space-around;
+  margin-bottom: 20px;
+  
+  
+}
+.left p{
+  font-size: 2.4rem;
+}
+footer{
+  font-size: smaller;
+}
+.footer-part2{
+padding: 0px 30px;
+display: flex;
+justify-content: space-between;
+}
+footer ul{
+  list-style: none;
+}
+.social-media{
+  display: flex;
+  gap: 20px;
+}
+.list-items{
+  display: flex;
+  gap: 20px;
+}
+.items{
+  margin-top: 20px ;
+  margin-bottom: 90px;
+  display: flex;
+  gap: 30px;
+  float: right;
+  
+}
+.items ul {
+  list-style: none;
+
+}
+.maps{
+  padding: 0px 30px;
+  width: 100vw;
+  height: 80vh;
+}
+.active{
+  color: red;
+}
+.inactive{
+color: green;
+}
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border: 2px solid red;
+  line-height: 2rem;
+  z-index: 100;
+  opacity: 1;
+}
+.hamburger ul{
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hamburger h2{
+text-align: center;
+}
