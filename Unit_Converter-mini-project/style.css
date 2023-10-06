@@ -1,0 +1,104 @@
+body{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("unit.jpg");
+
+}
+
+a{
+  float: left;
+  list-style-type: none;
+  text-decoration: none;
+   border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  margin-right: 8px;
+  
+  border: 2px solid #2ecc71;
+  padding: 14px 65px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+a:hover
+{
+background: #2ecc71;
+}
+
+.box{
+  width: 800px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(0,0,0,0.5);
+  
+}
+.box h1{
+	text-align: center;
+  color: #fff;
+  font-size: 50px;
+  border: 2px ;
+  font-weight: 500;
+}
+
+.box h2{
+  color: #fff;
+  margin: 0px;
+  padding-left: 340px;
+  font-size: 20px;
+  border: 5px ;
+}
+
+.text{
+	text-align: center;
+}
+
+.box input[type = "text"]{
+  border:0;
+  background: none;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px ;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 20px;
+  transition: 0.25s;
+}
+
+.box input[type = "text"]:hover
+{
+  width: 220px;
+  border-color: #2ecc71;
+}
+
+.box select{
+	border:0;
+  background: none;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 10px;
+  outline: none;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.box select:hover
+{
+  border-color: #2ecc71;
+}
+
+
+
+
+
+#inputType,#resultType{
+	width: 120px;
+	text-align: center;
+	color: black;
+}
