@@ -1,0 +1,3 @@
+[submodule "classy-weather"]
+	path = classy-weather
+	url = https://github.com/MohdSaquib114/Classy-Weather-App.git
