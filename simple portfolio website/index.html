@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aninda portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:ital,wght@0,400;1,100&family=Ubuntu:ital@1&family=Work+Sans:ital,wght@0,200;1,300;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(1, 1, 21);
+            color: blanchedalmond;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(5, 10, 45);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: blanchedalmond;
+        }
+
+        nav ul li a:hover {
+            text-decoration: none;
+            color: rgb(176, 176, 231);
+        }
+
+        .left {
+            font-size: 1.4rem;
+        }
+
+        .firstsection {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 100px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            /* background-color: rgb(202, 91, 91); */
+            font-size: 2.3rem;
+            /* margin: 70px 0; */
+        }
+
+        .leftsection .btn {
+            padding: 8px;
+            color: aliceblue;
+            background: #1e2167;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .rightsection img {
+            /* background-color: rgb(202, 91, 91); */
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(182, 80, 168);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(182, 80, 168);
+        }
+
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondsection .box {
+            background: white;
+            width: 65vw;
+            height: 2px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+        .secondsection .verticle {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -42px;
+            left: -12px;
+        }
+
+        .verticle-title {
+            position: relative;
+            top: 66px;
+            width: 150px;
+        }
+
+        .verticle-desc {
+            position: relative;
+            top: 67px;
+            color: gray;
+            width: 150px;
+            font-size: 10px;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 85px;
+        }
+
+        footer {
+            background-color: rgb(16, 15, 17);
+            /* height: 230px; */
+
+        }
+
+        /* .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        } */
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .rights {
+            text-align: center;
+            color: gray;
+            padding: 10px;
+        }
+
+        @media screen and (max-width: 1280px) {
+            
+
+            .firstsection {
+                flex-direction: column-reverse;
+            }
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondsection .verticle {
+                height: unset;
+                width: 1px;
+                background-color: white;
+                margin: 0 110px;
+            }
+
+            .verticle-title,
+            .verticle-desc {
+                left: 45px;
+            }
+
+            .verticle-title {
+                top: -46px;
+            }
+
+            .verticle-desc {
+                top: -29px;
+            }
+
+            .secondsection .box {
+                width: 75vw;
+            }
+
+            .secondsection .verticle {
+                margin: 62px 38px;
+            }
+            nav{
+                flex-direction: column;
+                padding: 10px 2px;
+            }
+            .leftsection{
+                width: 101% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;
+            }
+            .rightsection{
+                width: 70% !important;
+                display: flex;
+                justify-content: center;
+            }
+            .rightsection img{
+                width: 50vw;
+                margin-bottom: 70px;
+            }
+            .secondsection{
+                display: flex;
+                flex-direction: column;
+                align-items : center;
+                height: 180vh;
+            }
+            .secondsection h1{
+                font-size: 1.6rem;
+            }
+            body{
+                min-width: fit-content;
+            }
+
+            nav ul li{
+                margin: 0px 14px ;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="home">
+            <div class="left">Aninda's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#ss">About</a></li>
+                    <!-- <li><a href="/">services</a></li> -->
+                    <li><a href="#home">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="about">
+        <section class="firstsection">
+            <div class="leftsection">
+                <div>Hi, My name is <span class="purple">Aninda</span></div>
+                <div>and I am a passionate</div>
+                <!-- <div>Web Developer</div> -->
+                <span id="element"></span>
+                <!-- <div class="buttons">
+                    <button class="btn">LinkedIn
+
+                    </button>
+                    <button class="btn">Github
+                    </button>
+                </div> -->
+
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section id="ss" class="secondsection">
+            <span class="text-gray">What I have learned so far</span>
+            <h1>Knowledge Experience</h1>
+            <div class="box">
+                <div class="verticle">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="verticle-title">
+                        HTML Developer
+                    </div>
+                    <div class="verticle-desc">
+                        I am a skilled HTML developer with a passion for creating engaging and user-friendly web
+                        experiences. With a solid understanding of HTML, CSS, and a touch of JavaScript, I specialize in
+                        building the front-end of websites that captivate and connect with users.
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img class="image-top" src="css.png" alt="">
+                    <div class="verticle-title">
+                        CSS Developer
+                    </div>
+                    <div class="verticle-desc">
+                        I am a dedicated CSS developer who combines technical expertise, creativity, and attention to
+                        detail to transform designs into captivating web experiences. With a focus on responsive design,
+                        cross-browser compatibility, and optimized performance, I strive to deliver visually appealing
+                        and user-friendly websites that leave a lasting impression.
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img class="image-top" src="js.png" alt="">
+                    <div class="verticle-title">
+                        JS Developer
+                    </div>
+                    <div class="verticle-desc">
+                        I am a passionate JavaScript developer with a strong focus on front-end development. With a deep
+                        understanding of JavaScript and its frameworks, I strive to create dynamic and interactive web
+                        applications that provide seamless user experiences. My expertise lies in developing robust,
+                        scalable, and efficient solutions using modern JavaScript libraries and tools.
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img class="image-top" src="developer.png" alt="">
+                    <div class="verticle-title">
+                        DSA
+                    </div>
+                    <div class="verticle-desc">
+                        With my expertise in DSA, problem-solving abilities, and a comprehensive understanding of
+                        software development, I'm poised to tackle complex programming challenges and deliver
+                        high-quality solutions.
+                    </div>
+                </div>
+                <!-- <div class="verticle">
+                    <img class="image-top" src="developer.png" alt="">
+                    <div class="verticle-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="verticle-desc">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem deleniti, amet harum ipsam
+                        illo est neque ipsa? Doloribus libero reprehenderit mollitia saepe ipsum.
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- <div class="footer">
+            <div class="first">
+                <h3>Aninda's Developer Portfolio</h3>
+            </div>
+            <div class="second">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+            <div class="third">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+            <div class="fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                    <li>Home</li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="rights">www.anindasportfolio.com | All rights reserved</div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['B.Tech student', 'Web Developer', 'Mobile Photographer', 'Chess player'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
