@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@1&    display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="flex sticky top-0 flex-row md:justify-start overflow-hidden bg-gradient-to-l from-gray-700 to-black text-white p-4
+     ">
+     <img class="hidden w-8 md:block" src="./images/Anonymous-Sun.svg" alt="">
+      <div class="text-center font-bold font-mono capitalize tracking-tighter text-xl">
+        Weather forcaster
+      </div>
+      <input type="text" id="city" class="rounded-lg md:rounded-full ml-4 mr-2 w-32 md:w-48 md:ml-16 text-center text-black border-0 outline-0 max-w-screen-sm" onkeydown="preventNumberInput(event)" onkeyup="preventNumberInput(event)"
+      placeholder="Search Your City" >
+      <a href="" id="search">
+       <img class="w-8 hover:scale-110 duration-200" src="./images/icons8-search.svg" alt="">
+      </a>
+    </div>
+      <h1 class="text-white sticky top-16 p-2 font-space bg-gradient-to-r from-zinc-400 to-zinc-600 text-2xl lg:text-4xl font-bold uppercase text-center ">
+        Weather in <span id="cityName"></span>
+      </h1>
+      <div
+      class="flex flex-col md:flex-row md:justify-around overflow-x-hidden items-center justify-center min-h-screen bg-gradient-to-tr from-cyan-500 to-emerald-400"
+      >
+      
+      <div
+        class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0"
+      >
+        <div
+          class="flex flex-col bg-white rounded-3xl h-3/5 w-72 md:w-64 border-2 shadow-xl"
+        >
+          <h1>Temperature</h1>
+          <img src="./images/thermometer-temperature-svgrepo-com.svg" class="w-32 mx-auto" alt="">
+          <h2>
+            <span id="feels_like2"></span> <span class="wob_t" style="display:inline" aria-label="°Celsius" aria-disabled="true" role="button">°C</span>
+          </h2>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0"
+      >
+        <div
+          class="flex flex-col bg-white border-2 shadow-2xl rounded-3xl h-3/5 w-72 md:w-64 "
+        >
+          <h1>
+            humidity
+          </h1>
+          <img src="./images/raindrops-svgrepo-com.svg" class="w-32 mx-auto" alt="">
+          <h2>
+          <span id="humidity2"></span> %
+          </h2>
+        </div>
+      </div>
+      
+      <div
+        class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0"
+      >
+        <div
+          class="flex flex-col bg-white rounded-2xl shadow-2xl h-3/5 w-72 md:w-64 border-2  "
+        >
+          <h1>
+            wind
+          </h1>
+          <img src="./images/wind-svg.svg" class="w-32 mx-auto" alt="">
+          <h2>
+          <span id="wind_speed2"></span> km/hr
+          </h2>
+        </div>
+      </div>
+
+      <div
+      class="flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0"
+    >
+      <div
+        class="flex flex-col bg-white rounded-2xl shadow-2xl h-3/5 w-72 md:w-64 border-2  "
+      >
+        <h1>
+          wind dir
+        </h1>
+        <img src="./images/wind-rose-svgrepo-com.svg" class="w-32 mx-auto" alt="">
+        <h2>
+        <span id="wind_degrees"></span> degrees
+        </h2>
+      </div>
+    </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>

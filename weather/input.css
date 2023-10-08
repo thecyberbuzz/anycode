@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+     h1{
+        @apply text-black p-2 text-xl uppercase text-center font-bold
+     }
+     h2{
+        @apply text-black text-3xl font-serif text-center my-4 font-bold
+     }
+}
