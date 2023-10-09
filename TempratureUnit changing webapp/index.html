@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">
+            <div class="temp-text">
+                <input oninput="InputChange2()" id="upperInput" class="text" type="number" value="0">
+            </div>
+            <div class="temp">
+                <div class="dropdown">
+                    <img src="drop.png" alt="Drop down menu image">
+                    <button id="box1button" class="temp-button">Celcius</button>
+                    <div class="dropdown-content">
+                    <button id="B1F">Fahrenheit</button>
+                    <button id="B1S">Kelvin</button>
+                    <button id="B1T">Romar</button>
+                    <!--B1F = box-1's First  button , B1S = box-1's Second Button , B1T = box-1's Third button-->
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="box box-2">
+            <div class="temp-text">
+                <input oninput="InputChange1()" id="lowerInput" class="text2" type="number" value="273.15" >
+            </div>
+            <div class="temp">
+                <div class="dropdown">
+                    <img src="drop.png" alt="dropDown menu image">
+                    <button id="box2button" class="temp-button">Kelvin</button>
+                    <div class="dropdown-content">
+                    <button id="B2F" >Celcius</button>
+                    <button id="B2S">Fahrenheit</button>
+                    <button id="B2T">Romar</button>
+                    <!--B2F = box-2's First  button , B2S = box-2's Second Button , B2T = box-2's Third button-->
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
