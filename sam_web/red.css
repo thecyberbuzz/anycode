@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: sans-serif;
+}
+.nav-bar{
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.navbar{
+/* use background-image	
+	use linear-gradient for mix colour*/
+	background-image: linear-gradient(to right,purple,lightblue);
+	padding: 0 !important;
+}
+.navbar-brand img{
+	height: 40px;
+	width: 60px;
+	size: cover;
+}
+.navbar-nav li
+{
+	padding: 0 10px;
+}
+.navbar-nav li a{
+	color: white;
+	font-weight: 600;
+	float: right;
+	text-align: left;
+}
+.fa-bars{
+	color: white;
+	font-size: 30px !important;
+}
+.navbar-toggler{
+	outline: none !important;
+}
+/*------banner section------*/
+.banner{
+		background-image: linear-gradient(to right,purple,lightblue);
+		color: white;
+		padding: 5%;
+}
+.promo-title{
+	font-size: 40px;
+	font-weight: 600;
+	margin-top: 100px;
+}
+.play-btn{
+	width: 45px;
+	margin: 20px;
+}
+.banner a{
+	color: white;
+	text-decoration: none;
+}
+.services-img{
+	width: 100px;
+	margin-top: 20px;
+}
+.services{
+	padding: 20px;
+}
+.services h4
+{
+	padding: 5px;
+	margin-top: 25px;
+	text-transform: uppercase;
+}
+.title{
+	padding: 5px;
+	margin-top: 25px;
+}
+.title::before{
+	content: '';
+	background: purple;
+	height: 5px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	transform: translateY(63px);
+}
+/*.title::after{
+	content: '';
+	background: purple;
+	height: 10px;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	display: block;
+	transform: translateY(8px);
+}
+*/#services .btn-primary{
+	box-shadow: none;
+	padding: 8px 25px;
+	border: none;
+	border-radius: 20px;
+	background-image: linear-gradient(to right,purple,lightblue);
+}
