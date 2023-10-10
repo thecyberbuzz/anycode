@@ -393,6 +393,7 @@ body{
 .card:hover .card-para{
     transform: scale(1.1);
 }
+
 .card:hover .card-heading{
     color: black;
 }
