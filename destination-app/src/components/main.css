@@ -1,0 +1,135 @@
+*{
+    font-family: serif;
+}
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero{
+    height: 222px;
+    width: 681px;
+    margin: 40px auto;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+.hero h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    border: 5px black;
+    border: dashed 5px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.content{
+    /* border: 1px solid black; */
+    max-width: 1300px;
+    max-height: 2208px;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    /* align-self: auto; */
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+}
+.card{
+    width: 400px;
+    min-height: 704px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px 1px  rgb(180, 177, 177);
+    border-radius: 10px;
+}
+
+.card-img{
+    height: 380px;
+    width: 380px;
+    padding-top: 15px;
+    margin: auto;
+    object-fit: cover;
+
+}
+
+.card-content{
+    width: 100%;
+    padding: 20px;
+}
+.card-price{
+    color: rgb(29,161,84);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.card-city{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.card-desc-button{
+    color: rgb(31, 150, 197);
+}
+.card-button{
+    height: 43px;
+    width: 283px;
+    border: 2px solid rgb(218, 44, 44);
+    background-color:rgb(226, 186, 186);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+    
+}
+.card-button:hover{
+    background-color: rgb(219, 123, 123);
+    color: white;
+    box-shadow: 0 0 10px rgb(219, 123, 123);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.card-show{
+    cursor: pointer;
+    font-size: 19px;
+}
+
+.empty{
+    /*  */
+    position: relative;
+    top: 100px;
+}
+.refresh{
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+.refresh-button{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 30px 0;
+    height: 40px;
+    width: 90px;
+    position: relative;
+    left: 60px;
+    transition: 0.3s;
+
+}
+
+.refresh-button:hover{
+    background-color: rgb(78, 77, 77);
+    color: white;
+    box-shadow: 0 0 20px rgb(78, 77, 77);
+
+}
