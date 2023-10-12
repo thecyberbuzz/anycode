@@ -1,0 +1,91 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background: url(https://static.dezeen.com/uploads/2020/12/home-interiors-residential-2020-dezeen-roundups_dezeen_hero-1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgba(238, 238, 238, 0.5);
+    box-shadow: 0 5px 10px gray;
+    border-radius: 10px;
+    height: 600px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.month{
+    background-color: #00ADB5;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px auto;
+    width: 98%;
+    height: 25%;
+    border-radius: 10px;
+}
+.inner-month{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.days{
+    background-color: #393E46;
+    width: 96%;
+    height: 8%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 25px;
+}
+.days > p:last-child{
+    margin-right: 10px;
+}
+.days > p:first-child{
+    margin-left: 10px;
+}
+.dates{
+    background-color: #222831;
+    height: 62%;
+    margin: 5px 0;
+    width: 92%;
+    border-radius: 10px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(7,1fr);
+    justify-content: flex-start;
+    align-items: center;
+    padding:0 5px;
+}
+.dates > div{
+    display: flex;
+    padding: 10px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: large;
+}
+.empty:hover{
+    border: none;
+}
+.dates > .select:hover{
+    border: 2px solid #393E46;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dates > .selected{
+    background-color: #00ADB5;
+    border-radius: 5px;
+}
+.dates > .select:active{
+    background-color: aqua;
+}
