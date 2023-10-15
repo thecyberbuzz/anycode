@@ -1,0 +1,21 @@
+.input {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+
+  input {
+    padding: 1.75rem 1rem;
+    padding-left: 3rem;
+    border: none;
+    border-right: 1px solid rgba(#6e8098, 0.25);
+    font: inherit;
+    background-color: var(--color-card-bg);
+    color: var(--color-card-heading);
+    width: 100%;
+  }
+}
