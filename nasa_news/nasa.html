@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Latest NASA News 🚀</h1>
+    </header>
+    
+    <div class="container">
+        <div id="news-list"></div>
+    </div>
+
+    <script>
+        // Fetch news articles from a sample API
+        fetch('https://api.spaceflightnewsapi.net/v4/articles/?title_contains=NASA')
+            .then(response => response.json())
+            .then(data => {
+		data = data.results		
+                const newsList = document.getElementById('news-list');
+                data.slice(0, 5).forEach(article => {
+                    const newsItem = document.createElement('div');
+                    newsItem.classList.add('news-item');
+                    newsItem.innerHTML = `
+                        <h2>${article.title}</h2>
+                        <p>${article.summary}</p>
+	                <a href=${article.url}>${article.url}</a>
+	                <h6>${article.published_at}</h6>
+                    `;
+                    newsList.appendChild(newsItem);
+                });
+            })
+            .catch(error => console.error('Error fetching news:', error));
+    </script>
+</body>
+</html>
