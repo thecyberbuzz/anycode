@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+
+  &__label {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-check);
+    transition: background-color 0.2s;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-weight: var(--fw-2);
+    color: var(--color-card-heading);
+    margin-left: 1rem;
+  }
+
+  &__check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  &__check:checked ~ label {
+    background-color: var(--color-cta);
+    background-image: url("../images/desktop/icon-check.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+  }
+
+  &__check:focus-visible ~ label {
+    outline: 1px solid black;
+  }
+}

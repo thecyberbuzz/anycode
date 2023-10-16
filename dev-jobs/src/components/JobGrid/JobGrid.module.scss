@@ -1,0 +1,108 @@
+@use "../../sass/mixins/cta-button" as *;
+@use "../../sass/abstracts/breakpoints" as *;
+
+.container {
+  max-width: 70rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+
+  @media (max-width: $bp-5) {
+    max-width: 25rem;
+  }
+
+  @media (max-width: $bp-4) {
+    margin-top: 2rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  row-gap: 4rem;
+
+  @media (max-width: $bp-2) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: $bp-4) {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: $bp-5) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 1rem;
+
+  @media (max-width: $bp-5) {
+    flex-direction: column;
+    align-items: start;
+    height: unset;
+  }
+}
+
+.results {
+  color: var(--color-card-heading);
+  font-size: var(--fs-5);
+  text-transform: uppercase;
+  opacity: 0.5;
+  letter-spacing: 0.1rem;
+}
+
+.clear {
+  background-color: var(--color-card-bg);
+  color: var(--color-card-heading);
+  border: none;
+  padding: 0.5rem;
+  font-weight: var(--fw-2);
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-5);
+
+  img {
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.5rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-card-heading);
+    margin-left: 1rem;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    svg {
+      height: 0.5rem;
+      width: 0.5rem;
+    }
+  }
+
+  &--location {
+    img {
+      width: 0.6rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.error {
+  color: var(--color-card-heading);
+  font-size: var(--fs-1);
+  text-align: center;
+  font-weight: var(--fw-2);
+}

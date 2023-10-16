@@ -1,0 +1,63 @@
+.card {
+  background-color: var(--color-card-bg);
+  padding: 2.5rem;
+  padding-top: 3rem;
+  border-radius: 0.25rem;
+  color: var(--color-text);
+  position: relative;
+
+  &__logo {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+
+    padding: 1.5rem;
+    position: absolute;
+    top: -1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+    }
+  }
+
+  &__details {
+    display: flex;
+    font-size: var(--fs-4);
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &__dot {
+    height: 0.25rem;
+    width: 0.25rem;
+    border-radius: 100%;
+    background-color: var(--color-text);
+  }
+
+  &__heading {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-2);
+    color: var(--color-card-heading);
+    margin-bottom: 1rem;
+    display: block;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+
+  &__company {
+    margin-bottom: 2.5rem;
+  }
+
+  &__location {
+    color: var(--color-cta);
+    font-weight: var(--fw-2);
+    font-size: var(--fs-5);
+  }
+}

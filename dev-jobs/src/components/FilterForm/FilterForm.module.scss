@@ -1,0 +1,79 @@
+@use "../../sass/mixins/cta-button" as *;
+@use "../../sass/abstracts/breakpoints" as *;
+
+.form {
+  background-color: var(--color-card-bg);
+  max-width: 70rem;
+  width: 90%;
+  margin: 0 auto;
+  position: absolute;
+  top: 7.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 19rem 22rem;
+  align-items: center;
+
+  @media (max-width: $bp-1) {
+    grid-template-columns: 1fr 1fr 22rem;
+  }
+
+  @media (max-width: $bp-2) {
+    grid-template-columns: 1fr 1fr 19rem;
+  }
+
+  @media (max-width: $bp-3) {
+    grid-template-columns: 1fr 1fr 17rem;
+  }
+
+  @media (max-width: $bp-4) {
+    display: none;
+  }
+
+  &__title-icon {
+    left: 2.25rem !important;
+
+    @media (max-width: $bp-2) {
+      left: 1rem !important;
+    }
+  }
+
+  &__title-input {
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
+    padding-left: 5rem !important;
+
+    @media (max-width: $bp-2) {
+      padding-left: 3.5rem !important;
+    }
+  }
+
+  &__submit {
+    @include cta-button;
+    padding-inline: 2.25rem;
+    margin-left: 1.5rem;
+
+    @media (max-width: $bp-3) {
+      padding-inline: 1.25rem;
+    }
+  }
+
+  &__third {
+    justify-self: end;
+    padding-right: 1.25rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__full {
+    font-weight: var(--fw-2);
+    color: var(--color-card-heading);
+    margin-left: 1rem;
+  }
+
+  &__only {
+    @media (max-width: $bp-2) {
+      display: none;
+    }
+  }
+}
