@@ -1,0 +1,45 @@
+body{
+  text-align: center;
+}
+
+h1{
+  font-size: 3rem;
+  margin-bottom: 130px;
+  margin-top: 100px;
+}
+
+p{
+  font-size: 200%;
+  border: 2px aqua solid;
+  width: 150px;
+  margin: 20px auto;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+input{
+  border-radius: 8px;
+  height: 25px;
+  margin-bottom: 30px;
+}
+
+button{
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  width: 100px;
+}
+
+.refresh{
+  position: absolute;
+  top: 270px;
+  left: 880px;
+  width: 50px;
+  height: 30px;
+  border-radius: 40px;
+}
+
+footer{
+  border-top: 2px solid aqua;
+  margin-top: 10%;
+}
