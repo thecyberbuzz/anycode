@@ -1,45 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculator</title>
-</head>
-<body>
-    <div class="calculator">
-        <input type="text" placeholder="0" id="inputBox">
-        <div>
-            <button class="operator">AC</button>
-            <button class="operator">DEL</button>
-            <button class="operator">%</button>
-            <button class="operator">/</button>
-        </div>
-        <div>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator">*</button>
-        </div>
-        <div>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator">-</button>
-        </div>
-        <div>
-            <button>3</button>
-            <button>2</button>
-            <button>1</button>
-            <button class="operator">+</button>
-        </div>
-        <div>
-            <button>00</button>
-            <button>0</button>
-            <button>.</button>
-            <button class="equal">=</button>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Calculator using HTML, CSS and JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <style>
+      .calculator {
+        padding: 10px;
+        border-radius: 1em;
+        height: 608px;
+        width: 544px;
+        margin: auto;
+        background-color: #191b28;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+          rgba(0, 0, 0, 0.23) 0px 6px 6px;
+      }
+
+      .display-box {
+        font-family: "Poppins", sans-serif;
+        font-size: 35px;
+        background-color: #dcdbe1;
+        border: solid black 0.5px;
+        color: black;
+        border-radius: 5px;
+        width: 100%;
+        height: 65%;
+      }
+
+      #btn {
+        background-color: #fb0066;
+      }
+
+      input[type="button"] {
+        font-family: "Poppins", sans-serif;
+        font-size: 30px;
+        background-color: #686469;
+        color: white;
+        border: solid black 0.5px;
+        width: 100%;
+        border-radius: 5px;
+        height: 70%;
+        outline: none;
+      }
+
+      input:active[type="button"] {
+        background: #e5e5e5;
+        color: black;
+        -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+        -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+        box-shadow: inset 0px 0px 5px #c1c1c1;
+      }
+    </style>
+    <script>
+      function clearScreen() {
+        document.getElementById("result").value = "";
+      }
+
+      function display(value) {
+        document.getElementById("result").value += value;
+      }
+
+      function calculate() {
+        var p = document.getElementById("result").value;
+        var q = eval(p);
+        document.getElementById("result").value = q;
+      }
+      function clearScreen() {
+        document.getElementById("result").value = "";
+      }
+      function display(value) {
+        document.getElementById("result").value += value;
+      }
+    </script>
+
+    <table class="calculator">
+      <tr>
+        <td colspan="3">
+          <input class="display-box" type="text" id="result" disabled />
+        </td>
+
+        <td>
+          <input type="button" value="C" onclick="clearScreen()" id="btn" />
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" value="1" onclick="display('1')" /></td>
+        <td><input type="button" value="2" onclick="display('2')" /></td>
+        <td><input type="button" value="3" onclick="display('3')" /></td>
+        <td><input type="button" value="/" onclick="display('/')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="4" onclick="display('4')" /></td>
+        <td><input type="button" value="5" onclick="display('5')" /></td>
+        <td><input type="button" value="6" onclick="display('6')" /></td>
+        <td><input type="button" value="-" onclick="display('-')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="7" onclick="display('7')" /></td>
+        <td><input type="button" value="8" onclick="display('8')" /></td>
+        <td><input type="button" value="9" onclick="display('9')" /></td>
+        <td><input type="button" value="+" onclick="display('+')" /></td>
+      </tr>
+      <tr>
+        <td><input type="button" value="." onclick="display('.')" /></td>
+        <td><input type="button" value="0" onclick="display('0')" /></td>
+
+        <!-- calculate() function evaluates the mathematical expression -->
+        <td>
+          <input type="button" value="=" onclick="calculate()" id="btn" />
+        </td>
+        <td><input type="button" value="*" onclick="display('*')" /></td>
+      </tr>
+    </table>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
