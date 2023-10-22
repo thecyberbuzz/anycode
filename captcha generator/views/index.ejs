@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Captcha</title>
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Captcha</h1>
+    <p id="rece"><%=re%></p>
+    <form class="" action="/match " method="post">
+      <input type="text" name="man" value="" autocomplete="off">
+      <button type="submit" name="button">Submit</button>
+    </form>
+    <form action="/refresh" method="post">
+      <button class="refresh" type="submit" name="refresh"><box-icon name='refresh'></box-icon></button>
+    </form>
+    <footer>
+      <h4>© 2022</h4>
+    </footer>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
