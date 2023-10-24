@@ -10,4 +10,4 @@ while running:
   else:
     running = True
 
-print("You ate " + calories_ttl + " calories today!")
+print("Congrats, you ate " + calories_ttl + " calories today!")
