@@ -1,0 +1,75 @@
+
+body {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    height: 100vh;
+    color:white;
+
+    background-image: linear-gradient( rgba(0, 16, 171, 0.96), rgba(57,255,243,1));
+    font-family:arial;    
+    box-sizing: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+#counter{
+    font-size: 6rem;
+    color:rgb(0, 16,  171, 0.96);
+    font-family:verdana;
+    text-align: center;
+}
+#increament{
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 45px;
+    color: rgba(12,27,164,1);
+    border-color: rgba(12,27,164,1);
+    box-shadow: 1px 1px 18px  rgb(118, 114, 197);
+    cursor: pointer;
+    
+}
+#decreament{
+    display: inline-block;
+    font-size: 17px;
+    border-radius: 45px;
+    color: rgba(12,27,164,1);
+    border-color:rgba(12,27,164,1);
+    box-shadow: 1px 1px 18px rgb(118, 114, 197);
+   
+    cursor: pointer;
+}
+.maindiv {
+    background-color:white;
+    color:rgb(0, 0,  0);
+    width:300px;
+    padding:20px;
+    border-radius:25px;
+    margin:auto;
+    text-align: center;
+}
+#increament_btn{
+    border-width: 3px;
+    border-radius: 25px;
+    border-color: rgba(0, 16, 171, 0.96);
+    font-size: 20px;
+}
+#decreament_btn{
+    border-width: 3px;
+    border-radius: 25px;
+    border-color: rgba(0, 16, 171, 0.96);
+    font-size: 20px;
+}
+#increament_btn:hover
+{
+background-image:none;
+background-color:rgba(0, 16, 171, 0.96);
+color: white;
+}
+#decreament_btn:hover
+{
+background-image:none;
+background-color:rgba(0, 16, 171, 0.96);
+color: white;
+}
