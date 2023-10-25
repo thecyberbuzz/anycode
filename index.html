@@ -2,120 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Hold Shift to Check Multiple Checkboxes</title>
+    <title>Flex Panels</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <style>
       html {
-        font-family: serif;
-        background: #05bef1;
-      }
-
-      .inbox {
-        max-width: 400px;
-        margin: 50px auto;
-        background: rgb(255, 255, 255);
-        border-radius: 5px;
-        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
-      }
-
-      .item {
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid #f1f1f1;
-      }
-
-      .item:last-child {
-        border-bottom: 0;
-      }
-
-      input:checked + p {
-        background: #f9f9f9;
-        text-decoration: line-through;
-      }
-
-      input[type="checkbox"] {
-        margin: 20px;
-      }
-
-      p {
-        margin: 0;
-        padding: 20px;
-        transition: background 0.2s;
-        flex: 1;
+        box-sizing: border-box;
+        background: #ffc600;
         font-family: "helvetica neue";
         font-size: 20px;
         font-weight: 200;
-        border-left: 1px solid #d1e2ff;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .panels {
+        min-height: 100vh;
+        overflow: hidden;
+        display: flex;
+      }
+
+      .panel {
+        background: #6b0f9c;
+        box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+        color: rgb(5, 189, 251);
+        text-align: center;
+        align-items: center;
+        /* Safari transitionend event.propertyName === flex */
+        /* Chrome + FF transitionend event.propertyName === flex-grow */
+        transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+          flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+        font-size: 20px;
+        background-size: cover;
+        background-position: center;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .panel1 {
+        background-image: url(https://images.unsplash.com/photo-1496852010445-f97b2eaeca4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+      }
+      .panel2 {
+        background-image: url(https://plus.unsplash.com/premium_photo-1663089162887-403fb53108cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2hhcml0eXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);
+      }
+      .panel3 {
+        background-image: url(https://images.unsplash.com/photo-1501761095094-94d36f57edbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80);
+      }
+      .panel4 {
+        background-image: url(https://images.unsplash.com/photo-1561414927-6d86591d0c4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80);
+      }
+      .panel5 {
+        background-image: url(https://images.unsplash.com/photo-1528543606781-2f6e6857f318?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1965&q=80);
+      }
+
+      /* Flex Children */
+      .panel > * {
+        margin: 0;
+        width: 100%;
+        transition: transform 0.5s;
+        /* border: 1px solid red; */
+        flex: 1 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .panel > *:first-child {
+        transform: translateY(-100%);
+      }
+      .panel.open-active > *:first-child {
+        transform: translateY(0);
+      }
+      .panel > *:last-child {
+        transform: translateY(100%);
+      }
+      .panel.open-active > *:last-child {
+        transform: translateY(0);
+      }
+      .panel p {
+        text-transform: uppercase;
+        font-family: "Amatic SC", cursive;
+        text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+        font-size: 2em;
+      }
+
+      .panel p:nth-child(2) {
+        font-size: 4em;
+      }
+
+      .panel.open {
+        font-size: 40px;
+        flex: 5;
       }
     </style>
-    <!--
-   The following is a common layout you would see in an email client.
 
-   When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes inbetween those two checkboxes should be checked.
-
-  -->
-    <div class="inbox">
-      <div class="item">
-        <input type="checkbox" />
-        <p>This is an inbox layout.</p>
+    <div class="panels">
+      <div class="panel panel1">
+        <p>Hey</p>
+        <p>Let's</p>
+        <p>Dance</p>
       </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check one item</p>
+      <div class="panel panel2">
+        <p>Give</p>
+        <p>Take</p>
+        <p>Receive</p>
       </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Hold down your Shift key</p>
+      <div class="panel panel3">
+        <p>Experience</p>
+        <p>It</p>
+        <p>Today</p>
       </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Check a lower item</p>
+      <div class="panel panel4">
+        <p>Give</p>
+        <p>All</p>
+        <p>You can</p>
       </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Everything in between should also be set to checked</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Try to do it without any libraries</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Just regular JavaScript</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Good Luck!</p>
-      </div>
-      <div class="item">
-        <input type="checkbox" />
-        <p>Don't forget to tweet your result!</p>
+      <div class="panel panel5">
+        <p>Life</p>
+        <p>In</p>
+        <p>Motion</p>
       </div>
     </div>
 
     <script>
-      let firstclick;
-      function handlecheck(e) {
-        let inbetween = false;
-        if (e.shiftKey && this.checked) {
-          checkboxes.forEach((checkbox) => {
-            if (checkbox == this || checkbox == firstclick) {
-              inbetween = !inbetween;
-            }
-            if (inbetween) {
-              checkbox.checked = true;
-            }
-          });
-        }
+      const panels = document.querySelectorAll(".panel");
 
-        firstclick = this;
+      function toggleOpen() {
+        this.classList.toggle("open");
       }
-      const checkboxes = document.querySelectorAll(
-        '.inbox input[type="checkbox"]'
-      );
-      checkboxes.forEach((checkbox) =>
-        checkbox.addEventListener("click", handlecheck)
+
+      function toggleActive(e) {
+        if (e.propertyName.includes("flex")) {
+          this.classList.toggle("open-active");
+        }
+      }
+      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
+      panels.forEach((panel) =>
+        panel.addEventListener("transitionend", toggleActive)
       );
     </script>
   </body>
