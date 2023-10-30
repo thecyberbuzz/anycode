@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.recipe-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.recipe-app h1 {
+  font-family: sans-serif;
+  color: #fff;
+}
+.recipe-div {
+  display: flex;
+  flex-direction: colume;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.recipe-input input {
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: large;
+}
+.recipe-input button {
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  font-size: large;
+}
+
+.recipe {
+  width: 22%;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d3d3d3;
+  padding: 10px;
+  position: relative;
+  border-radius: 4px;
+  box-shadow: 2rem 3rem 5rem #aaa;
+}
+
+.recipe h2 {
+  background-color: rgba(161, 161, 161, 0.7);
+  border-radius: 2px;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 0.5rem 0.5rem #555;
+  color: #fff;
+}
+
+.recipe img {
+  border-radius: 4px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.recipe a {
+  font-size: 14px;
+  color: #40b48e;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.recipe button {
+  font-size: 15px;
+  outline: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #40b48e;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.ingredient-list {
+  margin-top: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.ingredient-list li {
+  margin: 0.5rem 0;
+}
+
+.ingredient-text {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.ingredient-weight {
+  color: #40b48e;
+  font-size: 1.3rem;
+}
